@@ -7,9 +7,13 @@ class HashTable:
         index=(key)%self.size
         return self.array[index]
 
-    def set(self, key, value):
+   def set(self, key, value):
         inedx=(key)%self.size
-        self.array[inedx]=value
+        if self.array[inedx]==None:
+         self.array[inedx]=value
+        else:
+           return 
+
 
 # Example usage
 table = HashTable(5)
